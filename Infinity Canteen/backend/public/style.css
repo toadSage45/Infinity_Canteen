@@ -1,0 +1,18 @@
+.sexy-line-text {
+    display: inline-block;
+    font-size: 36px;
+    font-weight: bold;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    -webkit-background-clip: text;
+    color: transparent;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.sexy-line-text:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}

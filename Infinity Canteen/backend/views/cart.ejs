@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <% if(locals.total && locals.foodItems && locals.foodItems.length >0){ %>
+        
+       
+        <h1 class="text-center">Food Items Ordered</h1>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Ordered From (Restaurant)</th>
+                <th>Quantity</th>
+                <th>Per Unit Cost</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% foodItems.forEach(item => { %>
+                <tr>
+                    <td><%= item.food_name %></td>
+                    <td><%= item.restaurant_id %></td>
+                    <td><%= item.quantity %></td>
+                    <td><%= item.price %></td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+
+    <h1>Total Bill : <%=total %></h1>
+
+    <% }else { %>
+        <h1>No items purchased</h1>
+    <% } %>
+</body>
+
+</html>
